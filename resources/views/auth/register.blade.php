@@ -28,6 +28,19 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
+        <!-- Role -->
+        <div class="mt-4">
+            <label for="role" class="block font-medium text-sm text-gray-700">Daftar Sebagai</label>
+            <select id="role" name="role" required
+                class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full">
+                <option value="kasir">Kasir</option>
+                <option value="admin">Admin</option>
+                <option value="pemilik">Pemilik</option>
+            </select>
+        </div>
+
+
+
         <!-- Confirm Password -->
         <div class="mt-4">
             <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
