@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +29,20 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::resource('barangs', BarangController::class);
+});
+
+Route::middleware(['auth', 'role:kasir'])->group(function () {
+    Route::resource('transaksis', TransaksiController::class);
+});
+
+
+
+Route::middleware(['auth', 'role:kasir'])->group(function () {
+    Route::resource('transaksis', TransaksiController::class);
+});
+
 
 require __DIR__.'/auth.php';
