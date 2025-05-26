@@ -45,4 +45,5 @@ Route::middleware(['auth', 'role:kasir'])->group(function () {
 });
 
 
+
 require __DIR__.'/auth.php';
