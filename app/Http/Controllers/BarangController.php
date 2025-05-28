@@ -36,7 +36,8 @@ class BarangController extends Controller
         'harga' => 'required|numeric',
     ]);
 
-    Barang::create($request->all());
+    Barang::create($request->only(['nama_barang', 'kode_barang', 'stok', 'harga']));
+    // Redirect to the index page with a success message
 
     return redirect()->route('barangs.index')->with('success', 'Barang berhasil ditambahkan.');
 
