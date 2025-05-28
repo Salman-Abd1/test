@@ -13,7 +13,7 @@
 
     {{-- Form Update Informasi Profil --}}
     <div class="card mb-4">
-        <div class="card-header">Update Informasi</div>
+        <div class="card-header text-white">Update Informasi</div>
         <div class="card-body text-white">
             @include('profile.partials.update-profile-information-form')
         </div>
@@ -21,7 +21,7 @@
 
     {{-- Form Update Password --}}
     <div class="card mb-4">
-        <div class="card-header">Ubah Password</div>
+        <div class="card-header text-white">Ubah Password</div>
         <div class="card-body text-white">
             @include('profile.partials.update-password-form')
         </div>
