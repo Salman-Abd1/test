@@ -39,11 +39,4 @@ Route::middleware(['auth', 'role:kasir'])->group(function () {
 });
 
 
-
-Route::middleware(['auth', 'role:kasir'])->group(function () {
-    Route::resource('transaksis', TransaksiController::class);
-});
-
-
-
 require __DIR__.'/auth.php';
