@@ -6,7 +6,7 @@
 
     {{-- Status sukses --}}
     @if (session('status') === 'profile-updated')
-        <div class="alert alert-success text-dark">
+        <div class="alert alert-success text-white">
             Profil berhasil diperbarui.
         </div>
     @endif

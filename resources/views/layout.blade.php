@@ -31,9 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="{{ route('barangs.index') }}">Barang</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('transaksis.index') }}">Transaksi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('laporan.index') }}">Laporan</a></li>
+                    
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item me-3">

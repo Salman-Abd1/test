@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\TransaksiController;
-
+use App\Http\Controllers\LaporanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +36,10 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 Route::middleware(['auth', 'role:kasir'])->group(function () {
     Route::resource('transaksis', TransaksiController::class);
+});
+
+Route::middleware(['auth', 'role:pemilik'])->group(function () {
+    Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
 });
 
 
